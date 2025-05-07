@@ -1,0 +1,1 @@
+import {convert} from "../../src/Fizzbuzz_kata/Fizzbuzz";
