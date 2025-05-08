@@ -8,4 +8,8 @@ describe("Leapyears", () => {
         expect(unit.revealIfLeapYear(1)).toBe(false);
     });
 
+    it("should return true for typical leap year", () => {
+        expect(unit.revealIfLeapYear(4)).toBe(true);
+    });
+
 })
