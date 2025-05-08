@@ -17,7 +17,7 @@ export class EuropeanParrot implements ParrotInterface {
 export class AfricanParrot implements ParrotInterface {
     private coconutCount: number;
 
-    constructor(private CNutCount: number = 0) {
+    constructor(CNutCount: number = 0) {
         this.coconutCount = CNutCount;
     }
 
@@ -34,7 +34,7 @@ export class NorwegianBlueParrot implements ParrotInterface {
     private isNailed: boolean;
     private voltage: number;
 
-    constructor(private isNailedBool: boolean = false, private volts: number = 0) {
+    constructor(isNailedBool: boolean = false, volts: number = 0) {
         this.isNailed = isNailedBool;
         this.voltage = volts;
     }
