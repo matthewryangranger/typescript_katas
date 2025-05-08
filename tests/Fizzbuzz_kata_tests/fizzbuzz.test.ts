@@ -68,5 +68,12 @@ describe("Fizzbuzz", () => {
         expect(unit.convert(77)).toBe("WhizzBang");
     });
 
+    it("should convert a multiple of seven, five, eleven to string BuzzWhizzBang", () => {
+        expect(unit.convert(385)).toBe("BuzzWhizzBang");
+    });
+
+    it("should convert a multiple of seven, five, eleven to string FizzBuzzWhizzBang", () => {
+        expect(unit.convert(1155)).toBe("FizzBuzzWhizzBang");
+    });
 
 })
