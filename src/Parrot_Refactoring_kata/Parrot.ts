@@ -34,6 +34,22 @@ export class AfricanParrot implements ParrotInterface {
     };
 }
 
+export class NorwegianBlueParrot implements ParrotInterface {
+    private isNailed: boolean;
+    private voltage: number;
+    constructor(private isNailedBool: boolean = false, private volts: number = 0){
+        this.isNailed = isNailedBool;
+        this.voltage = volts;
+    }
+    public getSpeed(): number {
+        return (this.isNailed) ? 0 : Math.min(24, this.voltage * 12);
+    };
+
+    getCry(): string {
+        return  this.voltage > 0 ? "Bzzzzzz" : "...";
+    };
+}
+
 export class Parrot {
     constructor(private parrotType: ParrotTypes,
                 private numberOfCoconuts: number,
@@ -50,20 +66,22 @@ export class Parrot {
                 let parrot2 = new AfricanParrot(this.numberOfCoconuts);
                 return parrot2.getSpeed();
             case ParrotTypes.NORWEGIAN_BLUE:
-                return (this.isNailed) ? 0 : Math.min(24, this.voltage * 12);
+                let parrot3 = new NorwegianBlueParrot(this.isNailed, this.voltage);
+                return parrot3.getSpeed();
         }
     }
 
     public getCry(): String {
         switch (this.parrotType) {
             case ParrotTypes.EUROPEAN:
-                let parrot3 = new EuropeanParrot();
-                return parrot3.getCry();
+                let parrot2 = new EuropeanParrot();
+                return parrot2.getCry();
             case ParrotTypes.AFRICAN:
                 let parrot = new AfricanParrot();
                 return parrot.getCry();
             case ParrotTypes.NORWEGIAN_BLUE:
-                return this.voltage > 0 ? "Bzzzzzz" : "...";
+                let parrot3 = new NorwegianBlueParrot(this.isNailed, this.voltage);
+                return parrot3.getCry();
         }
     }
 
