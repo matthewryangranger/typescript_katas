@@ -20,12 +20,16 @@ describe("Fizzbuzz", () => {
         expect(unit.convert(5)).toBe("Buzz");
     });
 
-    it("should convert a multiple of three to Fizz", () => {
+    it("should convert a multiple of three to string Fizz", () => {
         expect(unit.convert(6)).toBe("Fizz");
     });
 
-    it("should convert a multiple of five to Buzz", () => {
+    it("should convert a multiple of five to string Buzz", () => {
         expect(unit.convert(10)).toBe("Buzz");
+    });
+
+    it("should convert a multiple of three and five to string FizzBuzz", () => {
+        expect(unit.convert(15)).toBe("FizzBuzz");
     });
 
 
