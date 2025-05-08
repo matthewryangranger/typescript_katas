@@ -48,5 +48,25 @@ describe("Fizzbuzz", () => {
         expect(unit.convert(15)).toBe("FizzBuzz");
     });
 
+    it("should convert a multiple of three and seven to string FizzWhizz", () => {
+        expect(unit.convert(21)).toBe("FizzWhizz");
+    });
+
+    it("should convert a multiple of three and eleven to string FizzWhizz", () => {
+        expect(unit.convert(33)).toBe("FizzBang");
+    });
+
+    it("should convert a multiple of five and seven to string BuzzWhizz", () => {
+        expect(unit.convert(35)).toBe("BuzzWhizz");
+    });
+
+    it("should convert a multiple of five and eleven to string BuzzBang", () => {
+        expect(unit.convert(55)).toBe("BuzzBang");
+    });
+
+    it("should convert a multiple of seven and eleven to string WhizzBang", () => {
+        expect(unit.convert(77)).toBe("WhizzBang");
+    });
+
 
 })
