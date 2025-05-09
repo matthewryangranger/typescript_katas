@@ -23,4 +23,17 @@ describe('christmas song function', () => {
         expect(logSpy.mock.calls).toContainEqual(["A partridge in a pear tree."]);
         logSpy.mockRestore();
     });
+
+    it('should print to the console the third day stanza', () => {
+        const logSpy = jest.spyOn(console, 'log');
+        christmas(3);
+        expect(logSpy).toHaveBeenCalled();
+        expect(logSpy).toHaveBeenCalledTimes(5);
+        expect(logSpy).toHaveBeenCalledWith("On the third day of Christmas");
+        expect(logSpy.mock.calls).toContainEqual(["My true love sent to me:"]);
+        expect(logSpy.mock.calls).toContainEqual(["Three french hens"]);
+        expect(logSpy.mock.calls).toContainEqual(["Two turtle doves and"]);
+        expect(logSpy.mock.calls).toContainEqual(["A partridge in a pear tree."]);
+        logSpy.mockRestore();
+    });
 });

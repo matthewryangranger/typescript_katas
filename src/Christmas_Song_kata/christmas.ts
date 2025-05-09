@@ -12,6 +12,11 @@ export function beginningLines(day: string) {
     console.log("My true love sent to me:");
 }
 
+function thirdDay() {
+    console.log("Three french hens");
+    secondDay();
+}
+
 export function christmas(p0: number = 0): void {
     switch (p0) {
         case 1:
@@ -21,5 +26,10 @@ export function christmas(p0: number = 0): void {
         case 2:
             beginningLines("second");
             secondDay();
+            break;
+        case 3:
+            beginningLines("third");
+            thirdDay();
+            break;
     }
 }
