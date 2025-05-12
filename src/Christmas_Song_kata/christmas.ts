@@ -17,6 +17,11 @@ function thirdDay() {
     secondDay();
 }
 
+function fourthDay() {
+    console.log("Four calling birds");
+    thirdDay();
+}
+
 export function christmas(p0: number = 0): void {
     switch (p0) {
         case 1:
@@ -30,6 +35,10 @@ export function christmas(p0: number = 0): void {
         case 3:
             beginningLines("third");
             thirdDay();
+            break;
+        case 4:
+            beginningLines("fourth");
+            fourthDay();
             break;
     }
 }
