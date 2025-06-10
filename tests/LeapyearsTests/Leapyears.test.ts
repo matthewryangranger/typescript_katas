@@ -1,4 +1,4 @@
-import {Leapyears} from "../../src/Leapyears_kata/Leapyears";
+import {Leapyears} from "../../src/Leapyears/Leapyears";
 
 describe("Leapyears", () => {
 

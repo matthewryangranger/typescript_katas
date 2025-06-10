@@ -1,4 +1,4 @@
-import {christmas} from "../../src/Christmas_Song_kata/christmas";
+import {christmas} from "../../src/ChristmasSong/Christmas";
 
 describe('christmas song function', () => {
     it('should print to the console the fiirst day stanza', () => {

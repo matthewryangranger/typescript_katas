@@ -1,5 +1,5 @@
 /* Specification file: Refactored code must pass these provided tests */
-import {EuropeanParrot, AfricanParrot, NorwegianBlueParrot} from "../../src/Parrot_Refactoring_kata/Parrot";
+import {EuropeanParrot, AfricanParrot, NorwegianBlueParrot} from "../../src/ParrotRefactoring/Parrot";
 
 describe('ParrotInterface', () => {
 
